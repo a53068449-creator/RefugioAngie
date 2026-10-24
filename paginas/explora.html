@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111329">
+  <meta name="description" content="Tres mundos, tres historias y un refugio para explorar a tu propio ritmo.">
+  <title>Explora otros mundos | Refugio</title>
+
+  <link rel="stylesheet" href="../css/explora.css">
+  <script src="../js/explora.js" defer></script>
+</head>
+
+<body>
+  <div class="explore-background" aria-hidden="true"></div>
+
+  <header class="explore-header">
+    <a class="brand" href="../index.html" aria-label="Volver al inicio">
+      <span class="brand-icon">✦</span>
+      <span>refugio<span class="brand-dot">.</span></span>
+    </a>
+
+    <a class="back-link" href="../index.html">
+      <span aria-hidden="true">←</span> Volver a mi espacio
+    </a>
+  </header>
+
+  <main>
+    <section class="explore-hero">
+      <div class="hero-copy">
+        <span class="eyebrow">✦ TRES PUERTAS, TRES HISTORIAS ✦</span>
+
+        <h1>Hoy puedes estar<br>en <span>otro mundo.</span></h1>
+
+        <p>
+          Un bosque cubierto de nieve, una historia llena de decisiones
+          y un amor que se descubre poco a poco.
+          Elige tu mundo y deja que comience la aventura.
+        </p>
+
+        <a class="primary-button" href="#mundos">
+          Elegir un mundo <span aria-hidden="true">↓</span>
+        </a>
+
+        <p class="soft-note">
+          Tres historias para explorar a tu propio ritmo.
+        </p>
+      </div>
+
+      <div class="hero-art">
+        <div class="floating-star star-one">✦</div>
+        <div class="floating-star star-two">✧</div>
+        <div class="floating-star star-three">✦</div>
+      </div>
+    </section>
+
+    <section class="worlds-section" id="mundos">
+      <div class="section-heading">
+        <span class="eyebrow">LA BIBLIOTECA</span>
+        <h2>¿A dónde viajamos?</h2>
+        <p>Tres mundos esperan por ti.</p>
+      </div>
+
+      <div class="worlds-grid">
+
+        <!-- MUNDO 1: NARNIA -->
+        <article class="world-card world-narnia">
+          <div class="world-art">
+            <img
+              src="../img/mundo-narnia.png"
+              alt="Bosque nevado de Narnia con un farol encendido"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+            <span class="world-number">01</span>
+            <span class="world-symbol" aria-hidden="true">❄</span>
+          </div>
+
+          <div class="world-info">
+            <span class="world-category">BOSQUES Y FANTASÍA</span>
+            <h3>Más allá del armario</h3>
+            <p>
+              Un bosque silencioso, un farol encendido y secretos
+              escondidos entre la nieve.
+            </p>
+            <button class="world-button" type="button" data-world="narnia">
+              Abrir la puerta <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- MUNDO 2: BOYS OVER FLOWERS -->
+        <article class="world-card world-boys-over-flowers">
+          <div class="world-art">
+            <img
+              src="../img/bof-portada.png"
+              alt="Portada romántica de Boys Over Flowers"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+            <span class="world-number">02</span>
+            <span class="world-symbol" aria-hidden="true">♡</span>
+          </div>
+
+          <div class="world-info">
+            <span class="world-category">ROMANCE Y DECISIONES</span>
+            <h3>Boys Over Flowers</h3>
+            <p>
+              Angie será Jan-di. Cada decisión puede acercarla a
+              Jun-pyo o a Ji-hoo y cambiar su historia.
+            </p>
+            <button class="world-button" type="button" data-world="boys-over-flowers">
+              Vivir la historia <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </article>
+
+        <!-- MUNDO 3: HIDDEN LOVE -->
+        <article class="world-card world-hidden-love">
+          <div class="world-art">
+            <img
+              src="../img/hidden-love.png"
+              alt="Portada romántica de Hidden Love"
+              loading="lazy"
+              onerror="this.style.display='none'"
+            >
+            <span class="world-number">03</span>
+            <span class="world-symbol" aria-hidden="true">ღ</span>
+          </div>
+
+          <div class="world-info">
+            <span class="world-category">ROMANCE Y SEGUNDAS MIRADAS</span>
+            <h3>Hidden Love</h3>
+            <p>
+              Cien piezas, un recuerdo especial y una sorpresa
+              que espera al final del rompecabezas.
+            </p>
+            <button class="world-button" type="button" data-world="hidden-love">
+              Descubrir este amor <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTENEDOR QUE UTILIZA JAVASCRIPT PARA LOS MINIJUEGOS -->
+    <section
+      class="world-detail"
+      id="detalle-mundo"
+      hidden
+      aria-live="polite"
+    >
+      <button class="close-world" id="cerrar-mundo" type="button">
+        ← Volver a los mundos
+      </button>
+
+      <div class="detail-content">
+        <span class="eyebrow" id="detalle-categoria">UN LUGAR POR DESCUBRIR</span>
+        <h2 id="detalle-titulo">La puerta está abierta.</h2>
+        <p id="detalle-descripcion">
+          Tómate tu tiempo. No tienes que hacer nada más.
+        </p>
+
+        <div class="activity-panel">
+          <span class="activity-icon" aria-hidden="true">✦</span>
+          <h3 id="actividad-titulo">Una pequeña aventura</h3>
+          <p id="actividad-texto">
+            Mira a tu alrededor. Quizá haya algo que todavía no hayas visto.
+          </p>
+
+          <div class="activity-actions">
+            <button class="world-button" id="nueva-actividad" type="button">
+              Descubrir algo <span aria-hidden="true">✧</span>
+            </button>
+            <button class="quiet-button" id="mostrar-pista" type="button">
+              Dame una pista
+            </button>
+          </div>
+
+          <p class="activity-feedback" id="actividad-respuesta" hidden></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gentle-exit">
+      <span aria-hidden="true">☾</span>
+      <p>
+        Si hoy no tienes ganas de explorar, también está bien.
+        Puedes volver otro día.
+      </p>
+      <a href="../index.html">Regresar a mi refugio</a>
+    </section>
+  </main>
+
+  <footer class="explore-footer">
+    <span>refugio.</span>
+    <p>Un pequeño lugar para recorrer a tu propio ritmo.</p>
+    <span class="footer-star" aria-hidden="true">✦</span>
+  </footer>
+</body>
+</html>
