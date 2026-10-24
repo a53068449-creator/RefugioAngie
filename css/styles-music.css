@@ -1,0 +1,153 @@
+
+/* REPRODUCTOR MUSICAL DE REFUGIO ANGIE */
+
+.music-player {
+  position: fixed;
+  z-index: 99999;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(1000px, calc(100% - 28px));
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 18px;
+  box-sizing: border-box;
+  color: #f7f0ff;
+  background: rgba(16, 17, 39, 0.97);
+  border: 1px solid rgba(190, 157, 238, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.38);
+  backdrop-filter: blur(18px);
+  font-family: inherit;
+}
+
+.music-cover {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #bd91ed, #e98fbd);
+  color: #20142f;
+  font-size: 28px;
+}
+
+.music-info {
+  flex: 1 1 180px;
+  min-width: 100px;
+  display: grid;
+  gap: 3px;
+}
+
+.music-label {
+  color: #c4a5f0;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+}
+
+.music-info strong {
+  font-size: 14px;
+}
+
+.music-info small {
+  color: #c1bbd4;
+  font-size: 11px;
+}
+
+.music-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #c1bbd4;
+  font-size: 10px;
+}
+
+.music-progress-row input {
+  min-width: 0;
+  flex: 1;
+}
+
+.music-player input[type="range"] {
+  accent-color: #d5a4f4;
+  cursor: pointer;
+}
+
+.music-controls {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.music-controls button {
+  width: 32px;
+  height: 34px;
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: #e8dcfa;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.music-controls button:hover,
+.music-controls button.active {
+  background: rgba(190, 145, 237, 0.2);
+  color: #e3b7ff;
+}
+
+.music-controls .music-play {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #c5a0f2, #e99cc7);
+  color: #21152e;
+  font-size: 18px;
+}
+
+.music-volume {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100px;
+  color: #dfd1f2;
+}
+
+.music-volume input {
+  width: 100%;
+  min-width: 0;
+}
+
+body {
+  padding-bottom: 115px;
+}
+
+@media (max-width: 700px) {
+  .music-player {
+    bottom: 8px;
+    width: calc(100% - 16px);
+    gap: 8px;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .music-cover {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .music-info {
+    flex-basis: calc(100% - 60px);
+  }
+
+  .music-controls {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .music-volume {
+    width: 75px;
+  }
+}
